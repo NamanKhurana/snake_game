@@ -1,0 +1,80 @@
+body
+{
+    background: #000 url("https://images.pexels.com/photos/45843/snake-python-animal-scale-45843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size:cover;
+    font-family:arial;
+}
+
+a
+{
+    color:#fff;
+    text-decoration:none;
+}
+
+canvas
+{
+    background:black;
+}
+
+.container
+{
+    margin:100px auto 0 auto;
+    width:600px;
+    overflow:auto;
+    position:relative;
+}
+
+#stats
+{
+    width:590px;
+    background:#333;
+    padding:5px;
+    font-size:20px;
+    color:#fff;
+    margin-bottom:5px;
+    overflow:auto;
+}
+
+#score,#high_score
+{
+    width:25%;
+    height:50px;
+    padding-top:20px;
+    float:left;
+    margin-right:5px;
+    overflow:auto;
+    background:black;
+    text-align:center;
+}
+
+#reset_score
+{
+    float:right;
+    width:30%;
+    font-size:25px;
+    padding:5px;
+}
+
+#overlay
+{
+    display:none;
+    color:#fff;
+    font-size:25px;
+    text-align:center;
+    position:absolute;
+    top:33%;
+    left:32%;
+}
+
+#overlay a
+{
+    display:block;
+    margin-top:10px;
+    padding:10px;
+    background:#666;
+}
+
+#overlay a:hover
+{
+    background:#333;
+}
