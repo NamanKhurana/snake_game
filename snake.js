@@ -13,7 +13,7 @@ $(document).ready(function(){
     var score;
     var color = "green"
     var speed = 90;
-    
+    var gamePaused = false;
     //SNAKE ARRAY
     var snake_array;
     
@@ -153,13 +153,24 @@ $(document).ready(function(){
         $("#high_score").html("High Score: " + localStorage.highscore)
      }
 
+     function pauseGame() {
+        if (!gamePaused) {
+          clearInterval(game_loop);
+          gamePaused = true;
+        } else if (gamePaused) {
+          game_loop = setInterval(paint,speed);
+          gamePaused = false;
+        }
+      }
+
+
      $(document).keydown(function(e){
          var key = e.which;
          if(key == '37' && d!='right') d = "left"
          else if(key == '38' && d!='down') d = "up"
          else if(key == '39' && d!='left') d = "right"
          else if(key == '40' && d!='up') d = "down"
-
+         else if (key == "80") pauseGame()
      })
 })
 
